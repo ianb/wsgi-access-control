@@ -3,7 +3,7 @@ WSGI Access-Control Middleware
 
 This is a simple middleware for adding Access-Control-\* headers to
 your application, allowing `Cross-Origin Resource Sharing
-<http://www.w3.org/TR/cors/`>_ -- basically meaning that you can use
+<http://www.w3.org/TR/cors/>`_ -- basically meaning that you can use
 XMLHttpRequest from one domain to access resources on another domain.
 
 The middleware is located in
@@ -28,5 +28,6 @@ Note that there is a little workaround for a `Chrome bug
 <http://code.google.com/p/chromium/issues/detail?id=67743>`_ that
 turns ``*`` into a dynamic Access-Control-Allow-Origin header (copying
 the Origin request header).  A simple future feature is to allow a
-whitelist of origins, which also requires a dynamic Allow-Origin
-header (because the header is only allowed to include one value).
+whitelist of origins (instead of just a single domain or wildcard),
+which also requires a dynamic Allow-Origin header (because the header
+is only allowed to include one value).
